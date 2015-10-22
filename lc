@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 [readfile] [writefile]"
+    echo "Please specify two files with the program, one to read from and the other to write to.";
+    exit 1;
+fi
+
+if [ -e lowerfunc ]; then
+    lowerfunc < $1 > $2;
+else
+    echo "Missing required program lowerfunc";
+    echo "The program 'lowerfunc' does not exist in this directory."
+    echo "Make sure you are in the correct directory.";
+    echo "If you are in the correct directory,type 'make' to reinitialize the program.";
+    exit 1;
+fi
+
+exit
