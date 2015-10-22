@@ -3,8 +3,7 @@
 int lowerfunc(char c) {
  
   if (c >= 'A' && c <= 'Z')
-      c = (c + 32);
-      return c;
-
-  return 1;
+      return 0;
+  else;
+      return 1;
 }
